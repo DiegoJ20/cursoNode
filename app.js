@@ -24,10 +24,10 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 sequelize.sync().then(result => {
-    console.log(result)
+    app.listen(3000);
 })
 .catch(err => {
     err
 });
 
-app.listen(3000);
+
